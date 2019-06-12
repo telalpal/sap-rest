@@ -1,5 +1,4 @@
 from typing import Dict
-from modeltranslation.fields import TranslationField
 from modeltranslation.settings import AVAILABLE_LANGUAGES
 from modeltranslation.utils import build_localized_fieldname
 

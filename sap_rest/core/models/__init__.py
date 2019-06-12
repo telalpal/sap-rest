@@ -1,5 +1,5 @@
-from sap_rest.core.models.folder import Folder
-from sap_rest.core.models.icon import Icon
-from sap_rest.core.models.question import Question
-from sap_rest.core.models.resource import Resource
-from sap_rest.core.models.template import Template
+from sap_rest.core.models.folder import Folder  # noqa: F401
+from sap_rest.core.models.icon import Icon  # noqa: F401
+from sap_rest.core.models.question import Question  # noqa: F401
+from sap_rest.core.models.resource import Resource  # noqa: F401
+from sap_rest.core.models.template import Template  # noqa: F401

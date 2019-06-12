@@ -13,4 +13,3 @@ class FolderViewSet(viewsets.ViewSet):
         queryset = Folder.objects.all().select_related('icon')
         serializer = FolderSerializer(queryset, many=True)
         return Response(serializer.data)
-
