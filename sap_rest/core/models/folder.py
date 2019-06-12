@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from typing import Dict, List
+from typing import List
 from sap_rest.core.models.base import SapRestBaseModel
 from sap_rest.core.models.question import Question
 from sap_rest.core.models.mixins import GetTranslationsMixin

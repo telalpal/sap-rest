@@ -1,0 +1,31 @@
+{
+  "type": "folders",
+  "title": "Service Delivery",
+  "translations": {
+    "afr": "",
+    "spa": "",
+    "xho": "",
+    "nso": " ",
+    "por": "",
+    "sot": "",
+    "tsn": "",
+    "zul": ""
+  },
+  "icon": "People",
+  "questions": [
+    {
+      "content": "Protest March"
+    },
+    {
+      "content": "Lack of Water"
+    },
+    {
+      "content": "Sanitation Issues"
+    }
+  ],
+  "resources": [
+    {
+      "content": ""
+    }
+  ]
+}

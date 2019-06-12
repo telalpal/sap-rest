@@ -1,0 +1,53 @@
+{
+  "type": "folders",
+  "title": "Election Resources: South Africa",
+  "translations": {
+    "spa": " ",
+    "nso": " ",
+    "afr": " ",
+    "tsn": " ",
+    "zul": " ",
+    "por": " ",
+    "sot": " ",
+    "eng": " ",
+    "xho": " "
+  },
+  "icon": "Cancel",
+  "questions": [
+    {
+      "content": " "
+    }
+  ],
+  "resources": [
+    {
+      "content": "Helpful Guidelines For Journalists Covering The [SA] Election"
+    },
+    {
+      "content": "South African Press Code"
+    },
+    {
+      "content": "SA Resources: Election manifestos"
+    },
+    {
+      "content": "ELECTIONS 2019 RESOURCES - SOUTH AFRICA"
+    },
+    {
+      "content": "PRESS COUNCIL OF SA – GUIDANCE NOTES"
+    },
+    {
+      "content": "Broadcasting Guidelines"
+    },
+    {
+      "content": "Election Reporting Handbook"
+    },
+    {
+      "content": "Elections Coverage Planning"
+    },
+    {
+      "content": "How to detect potential election irregularities"
+    },
+    {
+      "content": "SA Elections: Laws and Regulations"
+    }
+  ]
+}

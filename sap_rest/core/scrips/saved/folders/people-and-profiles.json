@@ -1,0 +1,28 @@
+{
+  "type": "folders",
+  "title": "People and Profiles",
+  "translations": {
+    "afr": "",
+    "spa": "",
+    "xho": "",
+    "nso": " ",
+    "por": "",
+    "sot": "",
+    "tsn": "",
+    "zul": ""
+  },
+  "icon": "KeyboardVoice",
+  "questions": [
+    {
+      "content": "Biography"
+    },
+    {
+      "content": "Obituaries"
+    }
+  ],
+  "resources": [
+    {
+      "content": ""
+    }
+  ]
+}
