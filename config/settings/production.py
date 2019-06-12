@@ -57,6 +57,9 @@ SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
 # MEDIA
 # ------------------------------------------------------------------------------
 
+# STATIC
+# ------------------------
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # TEMPLATES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#templates
@@ -104,11 +107,10 @@ ANYMAIL = {
 # ------------------------------------------------------------------------------
 INSTALLED_APPS += ["gunicorn"]  # noqa F405
 
-# Collectfast
+# WhiteNoise
 # ------------------------------------------------------------------------------
-# https://github.com/antonagestam/collectfast#installation
-INSTALLED_APPS = ["collectfast"] + INSTALLED_APPS  # noqa F405
-AWS_PRELOAD_METADATA = True
+# http://whitenoise.evans.io/en/latest/django.html#enable-whitenoise
+MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")  # noqa F405
 
 # LOGGING
 # ------------------------------------------------------------------------------
