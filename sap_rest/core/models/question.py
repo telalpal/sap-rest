@@ -6,7 +6,7 @@ from sap_rest.core.models.mixins import GetTranslationsMixin
 
 
 class Question(GetTranslationsMixin, SapRestBaseModel):
-    FIELDS_TO_TRANSLATE = ('text', 'qtype')
+    FIELDS_TO_TRANSLATE = ('text',)
 
     template = models.ForeignKey('Template', on_delete=models.CASCADE)
     text = models.TextField(_('Text of Question'), )

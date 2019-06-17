@@ -137,7 +137,6 @@ if __name__ == '__main__':
             # incrementing pk's at end
             question_pk_counter += 1
 
-
     def find_resource(_title):
         for _resource in resources:
             if _resource['fields']['title'] == _title:
