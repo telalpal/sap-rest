@@ -6,8 +6,6 @@ from sap_rest.core.models.mixins import GetTranslationsMixin
 
 
 class Resource(GetTranslationsMixin, SapRestBaseModel):
-    FIELDS_TO_TRANSLATE = ('title', 'body')
-
     folder = models.ForeignKey(to='Folder', on_delete=models.CASCADE)
     title = models.CharField(_('Title of Resource'), max_length=255)
     body = MarkdownxField()

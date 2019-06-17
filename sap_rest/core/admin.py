@@ -5,12 +5,12 @@ from sap_rest.core.models import Icon, Folder, Resource, Question, Template
 
 
 @admin.register(Resource)
-class ResourceAdmin(TranslationAdmin, MarkdownxModelAdmin):
+class ResourceAdmin(MarkdownxModelAdmin):
     pass
 
 
 @admin.register(Icon)
-class IconAdmin(TranslationAdmin):
+class IconAdmin(admin.ModelAdmin):
     pass
 
 
@@ -25,5 +25,5 @@ class QuestionAdmin(TranslationAdmin):
 
 
 @admin.register(Template)
-class TemplateAdmin(TranslationAdmin):
+class TemplateAdmin(admin.ModelAdmin):
     pass

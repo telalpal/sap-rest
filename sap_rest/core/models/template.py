@@ -4,8 +4,6 @@ from sap_rest.core.models.base import SapRestBaseModel
 
 
 class Template(SapRestBaseModel):
-    FIELDS_TO_TRANSLATE = ('title', )
-
     folder = models.ForeignKey(to='Folder', on_delete=models.CASCADE)
     title = models.CharField(_('Title of Template'), max_length=255)
 

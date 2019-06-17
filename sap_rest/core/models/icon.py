@@ -4,8 +4,6 @@ from sap_rest.core.models.base import SapRestBaseModel
 
 
 class Icon(SapRestBaseModel):
-    FIELDS_TO_TRANSLATE = ('name', )
-
     name = models.CharField(_('Name of Icon'), max_length=255)
 
     def __str__(self):
