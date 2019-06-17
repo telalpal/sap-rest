@@ -10,6 +10,10 @@ FOLDERS_PATH = './saved/folders/'
 QUESTIONS_PATH = './saved/questions/'
 RESOURCES_PATH = './saved/resources/'
 
+# TODO hardcoded for now
+LANGUAGES = ['eng', 'spa', 'nso', 'afr', 'tsn', 'zul', 'por', 'sot', 'xho']
+DEFAULT_LANGUAGE = 'eng'
+
 
 def read_files(path: str) -> List[Dict]:
     files = []
@@ -123,9 +127,12 @@ if __name__ == '__main__':
         if not template_id:
             print(f'Template "{title}" not found, skipping questions')
             break
+        #  TODO
+        # to get other languages here taken order based search since there no other way with initial data
+        position = 0
         for concrete_question_dict in question.get('questions', []):
             concrete_question = concrete_question_dict.get('question')
-            questions.append({
+            question_dict = {
                 'model': 'core.Question',
                 'pk': question_pk_counter,
                 'fields': {
@@ -133,9 +140,23 @@ if __name__ == '__main__':
                     'text': concrete_question,
 
                 }
-            })
+            }  # will be used to add translations below
+            questions.append(question_dict)
+            for language in LANGUAGES:
+                translated_questions = question.get(language, {}).get('questions')
+                if translated_questions and isinstance(translated_questions, list):
+                    try:
+                        translated_question_dict = translated_questions[position]
+                        translated_question = translated_question_dict.get('question')
+                        field_name = f'text_{language}'
+                        question_dict['fields'][field_name] = translated_question
+                    except IndexError:
+                        print(f'Not found translation by index {position} for language "{language}".')
+                        print('------------------')
+                        print(translated_questions)
             # incrementing pk's at end
             question_pk_counter += 1
+            position += 1
 
     def find_resource(_title):
         for _resource in resources:
