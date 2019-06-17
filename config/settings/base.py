@@ -282,11 +282,5 @@ MODELTRANSLATION_TRANSLATION_FILES = (
 )
 
 HOOK_EVENTS = {
-    # 'any.event.name': 'App.Model.Action' (created/updated/deleted)
-    'book.added':       'bookstore.Book.created',
-    'book.changed':     'bookstore.Book.updated+',
-    'book.removed':     'bookstore.Book.deleted',
-    # and custom events, no extra meta data needed
-    'book.read':         'bookstore.Book.read',
-    'user.logged_in':    None
+    'folder.added':     'core.Folder.created',
 }
