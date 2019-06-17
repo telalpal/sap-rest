@@ -14,3 +14,8 @@ class ResourceViewSet(viewsets.ViewSet):
         resource = get_object_or_404(queryset, pk=pk)
         serializer = ResourceSerializer(resource)
         return Response(serializer.data)
+
+    def list(self, _):
+        queryset = Resource.objects.all()
+        serializer = ResourceSerializer(queryset, many=True)
+        return Response(serializer.data)

@@ -10,7 +10,12 @@ class QuestionViewSet(viewsets.ViewSet):
     API endpoint that allows Questions to be viewed.
     """
     def retrieve(self, _, pk=None):
-        queryset = Question.objects.all()
+        queryset = Question.objects.all().select_related('template')
         question = get_object_or_404(queryset, pk=pk)
         serializer = QuestionSerializer(question)
+        return Response(serializer.data)
+
+    def list(self, _):
+        queryset = Question.objects.all().select_related('template')
+        serializer = QuestionSerializer(queryset, many=True)
         return Response(serializer.data)
