@@ -7,8 +7,6 @@ from django.views import defaults as default_views
 urlpatterns = [
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
-    # markdown urls
-    path("markdownx/", include('markdownx.urls')),
     # api
     path("api/v1/", include("sap_rest.rest.urls", namespace="api")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

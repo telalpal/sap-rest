@@ -74,7 +74,7 @@ DJANGO_APPS = [
 ]
 THIRD_PARTY_APPS = [
     "rest_framework",
-    "markdownx",
+    "ckeditor",
 ]
 # apps which require to be added before django apps
 THIRD_PARTY_APPS_SPECIAL_ORDER = [

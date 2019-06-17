@@ -1,11 +1,10 @@
 from django.contrib import admin
-from markdownx.admin import MarkdownxModelAdmin
 from modeltranslation.admin import TranslationAdmin
 from sap_rest.core.models import Icon, Folder, Resource, Question, Template
 
 
 @admin.register(Resource)
-class ResourceAdmin(MarkdownxModelAdmin):
+class ResourceAdmin(TranslationAdmin):
     pass
 
 
