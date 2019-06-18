@@ -24,5 +24,5 @@ class QuestionAdmin(TranslationAdmin):
 
 
 @admin.register(Template)
-class TemplateAdmin(admin.ModelAdmin):
+class TemplateAdmin(TranslationAdmin):
     pass
