@@ -70,6 +70,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     "rest_framework",
     "ckeditor",
+    "rest_hooks",
 ]
 # apps which require to be added before django apps
 THIRD_PARTY_APPS_SPECIAL_ORDER = [
@@ -254,6 +255,14 @@ MODELTRANSLATION_TRANSLATION_FILES = (
     "sap_rest.core.translation",
 )
 
+# rest-hooks
+# https://github.com/zapier/django-rest-hooks
+# ------------------------------------------------------------------------------
 HOOK_EVENTS = {
-    'folder.added': 'core.Folder.created',
+    'question.added': 'core.Question.created+',
+    'question.updated': 'core.Question.updated+',
+    'template.added': 'core.Template.created+',
+    'template.updated': 'core.Template.updated+',
+    'resource.added': 'core.Resource.created+',
+    'resource.updated': 'core.Resource.updated+',
 }
